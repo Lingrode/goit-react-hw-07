@@ -8,16 +8,11 @@ import ContactForm from "./components/ContactForm/ContactForm";
 import { fetchContacts } from "./redux/contactsOps";
 
 import style from "./App.module.css";
-import {
-  selectContacts,
-  selectError,
-  selectLoading,
-} from "./redux/slices/selectors";
+import { selectContacts, selectError } from "./redux/slices/selectors";
 
 const App = () => {
   const dispatch = useDispatch();
   const items = useSelector(selectContacts);
-  const isLoading = useSelector(selectLoading);
   const isError = useSelector(selectError);
 
   useEffect(() => {
@@ -30,7 +25,6 @@ const App = () => {
       <ContactForm />
       <SearchBox />
       <ContactList contacts={items} />
-      {isLoading && <h2>Loading...</h2>}
       {isError && <h2>Something went wrong!</h2>}
     </div>
   );
