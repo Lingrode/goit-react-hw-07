@@ -6,13 +6,13 @@ import SearchBox from "./components/SearchBox/SearchBox";
 import ContactForm from "./components/ContactForm/ContactForm";
 
 import { fetchContacts } from "./redux/contactsOps";
-import {
-  selectLoading,
-  selectContacts,
-  selectError,
-} from "./redux/slices/contactsSlice";
 
 import style from "./App.module.css";
+import {
+  selectContacts,
+  selectError,
+  selectLoading,
+} from "./redux/slices/selectors";
 
 const App = () => {
   const dispatch = useDispatch();
