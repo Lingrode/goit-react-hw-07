@@ -5,6 +5,6 @@
 }
 
 .item {
-  max-width: calc(1500px / 4 - 20px);
+  max-width: calc(1500px / 3 - 30px);
   width: 100%;
 }
